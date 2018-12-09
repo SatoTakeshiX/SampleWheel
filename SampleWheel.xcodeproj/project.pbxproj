@@ -14,6 +14,13 @@
 		30E7781C21BCE33500F0A718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E7781A21BCE33500F0A718 /* LaunchScreen.storyboard */; };
 		30E7782721BCE33500F0A718 /* SampleWheelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7782621BCE33500F0A718 /* SampleWheelTests.swift */; };
 		30E7783221BCE33600F0A718 /* SampleWheelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7783121BCE33600F0A718 /* SampleWheelUITests.swift */; };
+		30E7785021BD537800F0A718 /* WheelView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E7784721BD537800F0A718 /* WheelView.framework */; };
+		30E7785721BD537800F0A718 /* WheelViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7785621BD537800F0A718 /* WheelViewTests.swift */; };
+		30E7785921BD537800F0A718 /* WheelView.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E7784921BD537800F0A718 /* WheelView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30E7785C21BD537800F0A718 /* WheelView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E7784721BD537800F0A718 /* WheelView.framework */; };
+		30E7785D21BD537800F0A718 /* WheelView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30E7784721BD537800F0A718 /* WheelView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30E7786521BD538100F0A718 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7784021BCE36900F0A718 /* WheelView.swift */; };
+		30E7786621BD543D00F0A718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E7781821BCE33500F0A718 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +38,42 @@
 			remoteGlobalIDString = 30E7780D21BCE33200F0A718;
 			remoteInfo = SampleWheel;
 		};
+		30E7785121BD537800F0A718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30E7780621BCE33200F0A718 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30E7784621BD537800F0A718;
+			remoteInfo = WheelView;
+		};
+		30E7785321BD537800F0A718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30E7780621BCE33200F0A718 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30E7780D21BCE33200F0A718;
+			remoteInfo = SampleWheel;
+		};
+		30E7785A21BD537800F0A718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30E7780621BCE33200F0A718 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30E7784621BD537800F0A718;
+			remoteInfo = WheelView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		30E7786121BD537800F0A718 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				30E7785D21BD537800F0A718 /* WheelView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		30E7780E21BCE33200F0A718 /* SampleWheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleWheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +89,13 @@
 		30E7782D21BCE33600F0A718 /* SampleWheelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleWheelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E7783121BCE33600F0A718 /* SampleWheelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWheelUITests.swift; sourceTree = "<group>"; };
 		30E7783321BCE33600F0A718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30E7784021BCE36900F0A718 /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		30E7784721BD537800F0A718 /* WheelView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WheelView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30E7784921BD537800F0A718 /* WheelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WheelView.h; sourceTree = "<group>"; };
+		30E7784A21BD537800F0A718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30E7784F21BD537800F0A718 /* WheelViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30E7785621BD537800F0A718 /* WheelViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewTests.swift; sourceTree = "<group>"; };
+		30E7785821BD537800F0A718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E7785C21BD537800F0A718 /* WheelView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +121,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E7784421BD537800F0A718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E7784C21BD537800F0A718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E7785021BD537800F0A718 /* WheelView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +145,8 @@
 				30E7781021BCE33200F0A718 /* SampleWheel */,
 				30E7782521BCE33500F0A718 /* SampleWheelTests */,
 				30E7783021BCE33600F0A718 /* SampleWheelUITests */,
+				30E7784821BD537800F0A718 /* WheelView */,
+				30E7785521BD537800F0A718 /* WheelViewTests */,
 				30E7780F21BCE33200F0A718 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +157,8 @@
 				30E7780E21BCE33200F0A718 /* SampleWheel.app */,
 				30E7782221BCE33500F0A718 /* SampleWheelTests.xctest */,
 				30E7782D21BCE33600F0A718 /* SampleWheelUITests.xctest */,
+				30E7784721BD537800F0A718 /* WheelView.framework */,
+				30E7784F21BD537800F0A718 /* WheelViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +166,7 @@
 		30E7781021BCE33200F0A718 /* SampleWheel */ = {
 			isa = PBXGroup;
 			children = (
+				30E7783F21BCE34C00F0A718 /* View */,
 				30E7781121BCE33200F0A718 /* AppDelegate.swift */,
 				30E7781321BCE33200F0A718 /* ViewController.swift */,
 				30E7781521BCE33200F0A718 /* Main.storyboard */,
@@ -125,7 +195,44 @@
 			path = SampleWheelUITests;
 			sourceTree = "<group>";
 		};
+		30E7783F21BCE34C00F0A718 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30E7784021BCE36900F0A718 /* WheelView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30E7784821BD537800F0A718 /* WheelView */ = {
+			isa = PBXGroup;
+			children = (
+				30E7784921BD537800F0A718 /* WheelView.h */,
+				30E7784A21BD537800F0A718 /* Info.plist */,
+			);
+			path = WheelView;
+			sourceTree = "<group>";
+		};
+		30E7785521BD537800F0A718 /* WheelViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				30E7785621BD537800F0A718 /* WheelViewTests.swift */,
+				30E7785821BD537800F0A718 /* Info.plist */,
+			);
+			path = WheelViewTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		30E7784221BD537800F0A718 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E7785921BD537800F0A718 /* WheelView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		30E7780D21BCE33200F0A718 /* SampleWheel */ = {
@@ -135,10 +242,12 @@
 				30E7780A21BCE33200F0A718 /* Sources */,
 				30E7780B21BCE33200F0A718 /* Frameworks */,
 				30E7780C21BCE33200F0A718 /* Resources */,
+				30E7786121BD537800F0A718 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				30E7785B21BD537800F0A718 /* PBXTargetDependency */,
 			);
 			name = SampleWheel;
 			productName = SampleWheel;
@@ -181,6 +290,43 @@
 			productReference = 30E7782D21BCE33600F0A718 /* SampleWheelUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		30E7784621BD537800F0A718 /* WheelView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E7785E21BD537800F0A718 /* Build configuration list for PBXNativeTarget "WheelView" */;
+			buildPhases = (
+				30E7784221BD537800F0A718 /* Headers */,
+				30E7784321BD537800F0A718 /* Sources */,
+				30E7784421BD537800F0A718 /* Frameworks */,
+				30E7784521BD537800F0A718 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WheelView;
+			productName = WheelView;
+			productReference = 30E7784721BD537800F0A718 /* WheelView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		30E7784E21BD537800F0A718 /* WheelViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E7786221BD537800F0A718 /* Build configuration list for PBXNativeTarget "WheelViewTests" */;
+			buildPhases = (
+				30E7784B21BD537800F0A718 /* Sources */,
+				30E7784C21BD537800F0A718 /* Frameworks */,
+				30E7784D21BD537800F0A718 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30E7785221BD537800F0A718 /* PBXTargetDependency */,
+				30E7785421BD537800F0A718 /* PBXTargetDependency */,
+			);
+			name = WheelViewTests;
+			productName = WheelViewTests;
+			productReference = 30E7784F21BD537800F0A718 /* WheelViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +348,13 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 30E7780D21BCE33200F0A718;
 					};
+					30E7784621BD537800F0A718 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					30E7784E21BD537800F0A718 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 30E7780D21BCE33200F0A718;
+					};
 				};
 			};
 			buildConfigurationList = 30E7780921BCE33200F0A718 /* Build configuration list for PBXProject "SampleWheel" */;
@@ -220,6 +373,8 @@
 				30E7780D21BCE33200F0A718 /* SampleWheel */,
 				30E7782121BCE33500F0A718 /* SampleWheelTests */,
 				30E7782C21BCE33600F0A718 /* SampleWheelUITests */,
+				30E7784621BD537800F0A718 /* WheelView */,
+				30E7784E21BD537800F0A718 /* WheelViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +398,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		30E7782B21BCE33600F0A718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E7784521BD537800F0A718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E7786621BD543D00F0A718 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E7784D21BD537800F0A718 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,6 +447,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E7784321BD537800F0A718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E7786521BD538100F0A718 /* WheelView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E7784B21BD537800F0A718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E7785721BD537800F0A718 /* WheelViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +475,21 @@
 			isa = PBXTargetDependency;
 			target = 30E7780D21BCE33200F0A718 /* SampleWheel */;
 			targetProxy = 30E7782E21BCE33600F0A718 /* PBXContainerItemProxy */;
+		};
+		30E7785221BD537800F0A718 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30E7784621BD537800F0A718 /* WheelView */;
+			targetProxy = 30E7785121BD537800F0A718 /* PBXContainerItemProxy */;
+		};
+		30E7785421BD537800F0A718 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30E7780D21BCE33200F0A718 /* SampleWheel */;
+			targetProxy = 30E7785321BD537800F0A718 /* PBXContainerItemProxy */;
+		};
+		30E7785B21BD537800F0A718 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30E7784621BD537800F0A718 /* WheelView */;
+			targetProxy = 30E7785A21BD537800F0A718 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,6 +632,7 @@
 		30E7783721BCE33600F0A718 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WNEUDLL4LF;
@@ -449,6 +651,7 @@
 		30E7783821BCE33600F0A718 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WNEUDLL4LF;
@@ -546,6 +749,102 @@
 			};
 			name = Release;
 		};
+		30E7785F21BD537800F0A718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WNEUDLL4LF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WheelView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.personal-factory.WheelView";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		30E7786021BD537800F0A718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WNEUDLL4LF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WheelView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.personal-factory.WheelView";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		30E7786321BD537800F0A718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNEUDLL4LF;
+				INFOPLIST_FILE = WheelViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.personal-factory.WheelViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleWheel.app/SampleWheel";
+			};
+			name = Debug;
+		};
+		30E7786421BD537800F0A718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNEUDLL4LF;
+				INFOPLIST_FILE = WheelViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.personal-factory.WheelViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleWheel.app/SampleWheel";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,6 +880,24 @@
 			buildConfigurations = (
 				30E7783D21BCE33600F0A718 /* Debug */,
 				30E7783E21BCE33600F0A718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30E7785E21BD537800F0A718 /* Build configuration list for PBXNativeTarget "WheelView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30E7785F21BD537800F0A718 /* Debug */,
+				30E7786021BD537800F0A718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30E7786221BD537800F0A718 /* Build configuration list for PBXNativeTarget "WheelViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30E7786321BD537800F0A718 /* Debug */,
+				30E7786421BD537800F0A718 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
