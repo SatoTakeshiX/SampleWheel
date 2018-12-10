@@ -9,7 +9,6 @@
 import Foundation
 // 責務：座標に関する計算を受け持つ
 
-
 struct CoordinateManager {
     func calculateDistance(center: CGPoint, point: CGPoint) -> CGFloat {
         //let center = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)

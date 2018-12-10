@@ -8,10 +8,14 @@
 
 import UIKit
 
-@IBDesignable
-class WheelView: UIView {
+public protocol RotaryProtocol: class {
+    func updatedRagianAngle(wheelView: WheelView, angle: CGFloat)
+}
 
-    @IBInspectable var image: UIImage? {
+@IBDesignable
+ public class WheelView: UIView {
+
+    @IBInspectable public var image: UIImage? {
         didSet {
             imageView.image = image
         }
@@ -30,6 +34,8 @@ class WheelView: UIView {
     // これはViewがもっているべきか、マネージャーか。
     var startTransform: CGAffineTransform?
     var deltaAngle: CGFloat = 0.0
+
+    weak public var delegate: RotaryProtocol?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,43 +59,41 @@ class WheelView: UIView {
     }
 
     // タッチ開始
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
-        let manager = CoordinateManager()
-        let touchPoint = touch.location(in: self)
-        let center = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
-        let dist = manager.calculateDistance(center: center, point: touchPoint)
-
-        // タッチ範囲外
-        if manager.isIgnoreRange(distance: dist, size: self.bounds.size) {
-            print("ignoring tap \(touchPoint.x), \(touchPoint.y)")
-            return
-        }
-
-        deltaAngle = manager.makeDeltaAngle(targetPoint: touchPoint, center: self.center)
-        startTransform = self.transform
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let targetAngle = makeDeltaAngle(touches: touches) else { return }
+        deltaAngle = targetAngle
+        startTransform = imageView.transform
     }
 
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        guard let touch = touches.first else { return }
-        let manager = CoordinateManager()
-        let touchPoint = touch.location(in: self)
-        let center = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
-        let dist = manager.calculateDistance(center: center, point: touchPoint)
-        // タッチ範囲外
-        if manager.isIgnoreRange(distance: dist, size: self.bounds.size) {
-            print("ignoring tap \(touchPoint.x), \(touchPoint.y)")
-            return
-        }
-
-        let targetAngle = manager.makeDeltaAngle(targetPoint: touchPoint, center: self.center)
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let targetAngle = makeDeltaAngle(touches: touches) else { return }
         let angleDifference = deltaAngle - targetAngle
-        transform = startTransform?.rotated(by: -angleDifference) ?? CGAffineTransform.identity
+        imageView.transform = startTransform?.rotated(by: -angleDifference) ?? CGAffineTransform.identity
     }
 
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 回転をtransformから算出
+        var angle = atan2(imageView.transform.b, imageView.transform.a)
+        // ラジアン範囲を -.pi < Θ < pi から 0 < Θ < 2 piに変更
+        if angle < 0 {
+            angle += 2 * .pi
+        }
+        delegate?.updatedRagianAngle(wheelView: self, angle: angle)
     }
 
+    private func makeDeltaAngle(touches: Set<UITouch>) -> CGFloat? {
+        guard let touch = touches.first else { return nil }
+        let manager = CoordinateManager()
+        let touchPoint = touch.location(in: self)
+        let center = CGPoint(x: imageView.bounds.width/2, y: imageView.bounds.height/2)
+        let dist = manager.calculateDistance(center: center, point: touchPoint)
+
+        // タッチ範囲外
+        if manager.isIgnoreRange(distance: dist, size: imageView.bounds.size) {
+            print("ignoring tap \(touchPoint.x), \(touchPoint.y)")
+            return nil
+        }
+
+        return manager.makeDeltaAngle(targetPoint: touchPoint, center: imageView.center)
+    }
 }
