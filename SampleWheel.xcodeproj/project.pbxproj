@@ -21,6 +21,7 @@
 		30E7785D21BD537800F0A718 /* WheelView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30E7784721BD537800F0A718 /* WheelView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30E7786521BD538100F0A718 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7784021BCE36900F0A718 /* WheelView.swift */; };
 		30E7786621BD543D00F0A718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E7781821BCE33500F0A718 /* Assets.xcassets */; };
+		30E7786821BD60F900F0A718 /* CoordinateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E7786721BD60F900F0A718 /* CoordinateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		30E7784F21BD537800F0A718 /* WheelViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E7785621BD537800F0A718 /* WheelViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewTests.swift; sourceTree = "<group>"; };
 		30E7785821BD537800F0A718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30E7786721BD60F900F0A718 /* CoordinateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +168,6 @@
 		30E7781021BCE33200F0A718 /* SampleWheel */ = {
 			isa = PBXGroup;
 			children = (
-				30E7783F21BCE34C00F0A718 /* View */,
 				30E7781121BCE33200F0A718 /* AppDelegate.swift */,
 				30E7781321BCE33200F0A718 /* ViewController.swift */,
 				30E7781521BCE33200F0A718 /* Main.storyboard */,
@@ -195,17 +196,11 @@
 			path = SampleWheelUITests;
 			sourceTree = "<group>";
 		};
-		30E7783F21BCE34C00F0A718 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				30E7784021BCE36900F0A718 /* WheelView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		30E7784821BD537800F0A718 /* WheelView */ = {
 			isa = PBXGroup;
 			children = (
+				30E7784021BCE36900F0A718 /* WheelView.swift */,
+				30E7786721BD60F900F0A718 /* CoordinateManager.swift */,
 				30E7784921BD537800F0A718 /* WheelView.h */,
 				30E7784A21BD537800F0A718 /* Info.plist */,
 			);
@@ -452,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E7786521BD538100F0A718 /* WheelView.swift in Sources */,
+				30E7786821BD60F900F0A718 /* CoordinateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
