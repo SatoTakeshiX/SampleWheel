@@ -11,18 +11,17 @@ import Foundation
 
 struct CoordinateManager {
     func calculateDistance(center: CGPoint, point: CGPoint) -> CGFloat {
-        //let center = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
         let dx = point.x - center.x
         let dy = point.y - center.y
         return CGFloat(sqrt(dx*dx + dy*dy)) //ピタゴラスの定理より
     }
 
     func isIgnoreRange(distance: CGFloat, size: CGSize) -> Bool {
-        if (distance < size.width/8 || size.width/2 < distance) {
+        if (distance < size.width/10 || size.width/2 < distance) {
             return true
         }
 
-        if (distance < size.height/8 || size.height/2 < distance) {
+        if (distance < size.height/10 || size.height/2 < distance) {
             return true
         }
 

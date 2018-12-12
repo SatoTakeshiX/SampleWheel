@@ -15,7 +15,7 @@ public protocol RotaryProtocol: class {
 @IBDesignable
  public class WheelView: UIView {
 
-    @IBInspectable public var image: UIImage? {
+    @IBInspectable var image: UIImage? {
         didSet {
             imageView.image = image
         }
@@ -23,7 +23,7 @@ public protocol RotaryProtocol: class {
 
     @IBInspectable var contentModeNumber: Int = 0 {
         didSet {
-            guard let mode = UIView.ContentMode.init(rawValue: contentModeNumber) else { return }
+            guard let mode = UIView.ContentMode(rawValue: contentModeNumber) else { return }
             imageView.contentMode = mode
         }
     }
@@ -31,14 +31,20 @@ public protocol RotaryProtocol: class {
     //
     private let imageView = UIImageView(frame: CGRect())
 
-    // これはViewがもっているべきか、マネージャーか。
+    // タップ開始時のTransform
     var startTransform: CGAffineTransform?
+    // タップ座標と中心点の角度
     var deltaAngle: CGFloat = 0.0
 
     weak public var delegate: RotaryProtocol?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         setup()
     }
 
@@ -53,10 +59,6 @@ public protocol RotaryProtocol: class {
         imageView.bottomAnchor.constraint(equalToSystemSpacingBelow: self.bottomAnchor, multiplier: 0).isActive = true
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
 
     // タッチ開始
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

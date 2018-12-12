@@ -36,7 +36,5 @@ extension ViewController: RotaryProtocol {
 
         digreeLabel.text = "角度: \(digreeString)°"
     }
-
-
 }
 
